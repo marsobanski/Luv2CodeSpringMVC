@@ -26,5 +26,21 @@
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
+
+	<!-- encoding filter -->
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>
+			com.luv2code.springdemo.mvc.EncodingFilter
+		</filter-class>
+
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>

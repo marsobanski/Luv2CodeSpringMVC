@@ -1,5 +1,6 @@
 package com.luv2code.springdemo.mvc;
 
+import com.luv2code.springdemo.mvc.validation.CourseCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,6 +30,8 @@ public class Customer {
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "mmust be postal code pattern ")
     private String postalCode;
 
-    //@CourseCode(value="TOPS", messsage="must start with TOPS")
+    @Getter
+    @Setter
+    @CourseCode(value = "TOPS", message = "must start with TOPS")
     private String courseCode;
 }
